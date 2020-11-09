@@ -637,7 +637,7 @@
             {% if tpbService.is_free == 0 %}
             <div class="g-row price ">
                 <div class="label" data-price="{{product_price}}">{{tpbText.total_price}}</div>
-                {% assign total = product_price | multipleWith : qty %}
+                {% assign total = total+product_price | multipleWith : qty %}
                 <div class="value" data-qty="{{qty}}" data-total="{{total}}">{{ total | format_money : window.moneyFormat }}
                 </div>
             </div>
