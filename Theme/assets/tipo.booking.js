@@ -630,7 +630,7 @@ var tpBooking = function ($) {
                 $(self).find('.tpb-form-control.variant').show();
             }
             tpbAvailable = responseProducts.variants[0].available;
-            tpbPriceProduct = responseProducts.variants[0].price;
+            tpbPriceProduct = tpbPriceProduct+ responseProducts.variants[0].price;
             if (tpbPriceProduct !== null && tpbProduct_.is_free == 0) {
                 $(self).find('.tpb-form-control.price').show();
                 $(self).find('.tpb-text-price').html(Shopify.formatMoney(tpbPriceProduct, window.moneyFormat));
