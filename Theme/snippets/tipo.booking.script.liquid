@@ -373,7 +373,7 @@
                             </div>
                             {% endif %}
                             <div class="tpb-form-control price" {% if tpbProduct.is_free == 0 %} style="display:none;" {% endif %}>
-                                <p>{{tpbText.price}}: <span class="tpb-text-price"/></p>
+                                <p>{{tpbText.price}}:_ <span class="tpb-text-price"/></p>
                             </div>
                             <div class="tpb-form-control booking-note">
                                 <p></p>
@@ -637,7 +637,7 @@
             {% if tpbService.is_free == 0 %}
             <div class="g-row price ">
                 <div class="label" data-price="{{product_price}}">{{tpbText.total_price}}</div>
-                {% assign total = total+product_price | multipleWith : qty %}
+                {% assign total = product_price | multipleWith : qty %}
                 <div class="value" data-qty="{{qty}}" data-total="{{total}}">{{ total | format_money : window.moneyFormat }}
                 </div>
             </div>
