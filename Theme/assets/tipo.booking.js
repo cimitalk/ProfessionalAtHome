@@ -859,6 +859,7 @@ var tpBooking = function ($) {
                 if ((variant.option1 ? option1 == variant.option1 : true) && (variant.option2 ? option2 == variant.option2 : true) && (variant.option3 ? option3 == variant.option3 : true)) {
                     tpbVariantId = variant.id
                     modules.variant = variant;
+                    //Modificare per cambio logica di calcolo
                     tpbPriceProduct = variant.price;
                     index = index_v;
                 }
