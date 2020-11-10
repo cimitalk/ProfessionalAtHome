@@ -1,12 +1,12 @@
 <script type="text/javascript">
   var tpbAppUrl = 'https://booking.tipo.io';
   // var tpbAppUrl = 'http://localhost/bookingdevUpdate/public';
-  var tpbShopId = '14180';
+  var tpbShopId = '14192';
   var tpbShopPlan = {
       plan: 'BETA',
       feature: {"employee": -1, "product": -1, "location": -1, "extraFieldSet": true, "hideBrand": false}
   };
-  var tpbUrlShop = 'prof-home2.myshopify.com';
+  var tpbUrlShop = 'prof-home3.myshopify.com';
   var tpbCountryCode = window.customCountryCode || ['it'];
   var tpbDomainShop = '{{ shop.domain }}';
   var tpbProductId = '{{ product.id }}';
@@ -42,10 +42,10 @@
   var tpbTimeZoneServer = 'UTC';
 
   var tpbConfigs = {
-    products : [{"id":"6077269409975","title":"Andrea","handle":"andrea","capacity":{"type":"variant","rule":{"37539178709175":1,"37539178741943":1,"37539178774711":1,"37539178807479":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539178709175"},{"duration":60,"value":"37539178741943"},{"duration":60,"value":"37539178774711"},{"duration":60,"value":"37539178807479"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077284253879","title":"Luisa","handle":"luisa","capacity":{"type":"variant","rule":{"37539208396983":1,"37539208429751":1,"37539208462519":1,"37539208495287":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539208396983"},{"duration":60,"value":"37539208429751"},{"duration":60,"value":"37539208462519"},{"duration":60,"value":"37539208495287"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077276684471","title":"Marco","handle":"marco","capacity":{"type":"variant","rule":{"37539195879607":1,"37539195912375":1,"37539195945143":1,"37539195977911":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539195879607"},{"duration":60,"value":"37539195912375"},{"duration":60,"value":"37539195945143"},{"duration":60,"value":"37539195977911"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077291266231","title":"Marta","handle":"marta","capacity":{"type":"variant","rule":{"37539218882743":1,"37539218948279":1,"37539218981047":1,"37539219013815":1,"37539219046583":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539218882743"},{"duration":60,"value":"37539218948279"},{"duration":60,"value":"37539218981047"},{"duration":60,"value":"37539219013815"},{"duration":60,"value":"37539219046583"}]},"location_ids":[17218],"employee_ids":[23073]}],
+     products : [{"id":"6077269409975","title":"Andrea","handle":"andrea","capacity":{"type":"variant","rule":{"37539178709175":1,"37539178741943":1,"37539178774711":1,"37539178807479":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539178709175"},{"duration":60,"value":"37539178741943"},{"duration":60,"value":"37539178774711"},{"duration":60,"value":"37539178807479"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077284253879","title":"Luisa","handle":"luisa","capacity":{"type":"variant","rule":{"37539208396983":1,"37539208429751":1,"37539208462519":1,"37539208495287":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539208396983"},{"duration":60,"value":"37539208429751"},{"duration":60,"value":"37539208462519"},{"duration":60,"value":"37539208495287"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077276684471","title":"Marco","handle":"marco","capacity":{"type":"variant","rule":{"37539195879607":1,"37539195912375":1,"37539195945143":1,"37539195977911":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539195879607"},{"duration":60,"value":"37539195912375"},{"duration":60,"value":"37539195945143"},{"duration":60,"value":"37539195977911"}]},"location_ids":[17218],"employee_ids":[23073]},{"id":"6077291266231","title":"Marta","handle":"marta","capacity":{"type":"variant","rule":{"37539218882743":1,"37539218948279":1,"37539218981047":1,"37539219013815":1,"37539219046583":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37539218882743"},{"duration":60,"value":"37539218948279"},{"duration":60,"value":"37539218981047"},{"duration":60,"value":"37539219013815"},{"duration":60,"value":"37539219046583"}]},"location_ids":[17218],"employee_ids":[23073]}],
     locations : [{"id":17218,"name":"Default location","employee_ids":[23073]}],
     employees : [{"id":23073,"first_name":"Any","last_name":"Trainer"}]
-  };
+ };
   var tpbText = tpbSettings.translation.widget.default;
   if (tpbSettings.translation.widget[tpbLocale]) {
       tpbText = tpbSettings.translation.widget[tpbLocale];
@@ -312,8 +312,8 @@
                                     <label for="option-1" class="tpb-label-option1"></label>
                                     <select class="slim-select tpb-select-option tpb-select-option-1"
                                             placeholder="{{tpbText.variant_placeholder}}" name="option1"
-                                            data-label="option1" multiple>
-                                        <option data-placeholder="true"/>
+                                             data-label="option1" multiple>
+                                       <option data-placeholder="true"/>
                                     </select>
                                 </div>
                                 <div class="tpb-form-control-option tpb-option-2">
