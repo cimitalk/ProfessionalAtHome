@@ -168,7 +168,7 @@ var tpBooking = function ($) {
     tpb_engine.registerFilter('multipleWith', function (v, arg) {
         return v * arg;
     });
-
+//modifica a caso
     modules.getHistory = function (page) {
         $.ajax({
             url: tpbAppUrl + '/booking_api/get-history?urlShop=' + tpbUrlShop + '&customerId=' + tpbCustomer.id + '&page=' + page,
