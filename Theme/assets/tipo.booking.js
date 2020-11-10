@@ -351,6 +351,7 @@ var tpBooking = function ($) {
                     if (!tpbFeature.hideBrand) {
                         $('.tpb-booking-form .copyright').show();
                     }
+                    document.body.className += ' booking-widget-appended';
                 });
             }
 
@@ -667,11 +668,14 @@ var tpBooking = function ($) {
             }
           	var selectProduct = this;
           	var rqProducts = $.getJSON('/products/' + $(this).find(':selected').data('handle') + '.js');
-            var rqProductApi = $.getJSON(tpbAppUrl + '/booking_api/productApi/'+tpbShopId+'/' + $(this).val());
+            var rqProductApi = $.get('/products/'+$(this).find(':selected').data('handle')+'?view=tipo_booking');
             $.when(rqProducts,rqProductApi).done(function (responseProducts,responseProductApi) {
                 tpbProduct_ = tpbConfigs.products.find(x => x.id == $(selectProduct).val());
                 tpbDisableEmployee = tpbProduct_.available_time_basis == 'product';
-                tpbProductApi = responseProductApi[0].productApi;
+                var tpbProductApiScriptContent = responseProductApi[0];
+              	var F=new Function (tpbProductApiScriptContent);
+                F();
+                
                 tpbProduct = tpbProductApi
                 // Location Select
                 var tpbProductFront = responseProducts[0];
@@ -826,7 +830,7 @@ var tpBooking = function ($) {
                 }
                 tpbVariantId = tpbProductFront.variants[0].id
                 tpbAvailable = tpbProductFront.variants[0].available
-                tpbPriceProduct = tpbPriceProduct + tpbProductFront.variants[0].price
+                tpbPriceProduct = tpbProductFront.variants[0].price
                 if (tpbPriceProduct !== null && tpbProduct_.is_free == 0) {
                     $(self).find('.tpb-form-control.price').show();
                     $(self).find('.tpb-text-price').html(Shopify.formatMoney(tpbPriceProduct, window.moneyFormat));
@@ -859,7 +863,6 @@ var tpBooking = function ($) {
                 if ((variant.option1 ? option1 == variant.option1 : true) && (variant.option2 ? option2 == variant.option2 : true) && (variant.option3 ? option3 == variant.option3 : true)) {
                     tpbVariantId = variant.id
                     modules.variant = variant;
-                    //Modificare per cambio logica di calcolo.
                     tpbPriceProduct = variant.price;
                     index = index_v;
                 }
