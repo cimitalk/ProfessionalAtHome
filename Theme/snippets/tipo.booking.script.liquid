@@ -1,12 +1,12 @@
 <script type="text/javascript">
   var tpbAppUrl = 'https://booking.tipo.io';
   // var tpbAppUrl = 'http://localhost/bookingdevUpdate/public';
-  var tpbShopId = '13904';
+  var tpbShopId = '14180';
   var tpbShopPlan = {
       plan: 'BETA',
       feature: {"employee": -1, "product": -1, "location": -1, "extraFieldSet": true, "hideBrand": false}
   };
-  var tpbUrlShop = 'prof-home.myshopify.com';
+  var tpbUrlShop = 'prof-home2.myshopify.com';
   var tpbCountryCode = window.customCountryCode || ['it'];
   var tpbDomainShop = '{{ shop.domain }}';
   var tpbProductId = '{{ product.id }}';
@@ -30,7 +30,7 @@
     tpbProduct.options = {{ product.options_with_values | json }}  {% endif %}
   var tpbVariantId = false;
 
-    var tpbSettings = {"general":{"hide_add_to_cart":"2","hide_buy_now":"2","redirect_url":null,"allow_bring_more":false,"confirm_to":"checkout","time_format":"24h","multipleEmployees":"0","multipleLocations":"1","formatDate":"YYYY-MM-DD","formatDateServe":"Y-m-d","formatDateTime":"YYYY-MM-DD HH:mm","formatTime":"HH:mm","weekStart":0},"booking":{"text_price_color":"#000000","timeBlock":"fixed","stepping":"60","font":"Arial","primary_color":"#000000","cancel_button":"#ffffff","text_color":"#000000","calender_background_color":"#ffffff","calender_text_color":"#000000","day_off_color":"#a3a3a3","time_slot_color":"#ffffff","time_slot_color_hover":"#9b9b9b","selected_time_slot_color":"#ffd153","background_color_calendar":"#2b3360","background_image":"preset1.jpg","selected_day_color":"#50e3c2","time_slot_color_selected":"#50e3c2","background_color_box_message_time_slot_no_available":"#e9e9e9","text_color_text_box_message_time_slot_no_available":"#424242","time_slot_no_available_color":"#a3a3a3","sortProduct":{"type":1,"sortProductAuto":"asc","sortProductManually":["6011638677671","6011630387367","6011644805287","6011650113703","6011653456039"]},"statusDefault":"2"},"translation":{"languageDatepicker":"en-US","customDatePickerDays":"Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday","customDatePickerDaysShort":"Sun, Mon, Tue, Wed, Thu, Fri, Sat","customDatePickerDaysMin":"Su, Mo, Tu, We, Th, Fr, Sa","customDatePickerMonths":"January, February, March, April, May, June, July, August, September, October, November, December","customDatePickerMonthsShort":"Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec","widget":{"default":{"please_select":"Please select service","training":"Training","trainer":"Trainer","bringing_anyone":"Bringing anyone with you?","num_of_additional":"Number of Additional People","date_and_time":"Pick date & time","continue":"Continue","total_price":"Total Price","confirm":"Confirm","cancel":"Cancel","thank_you":"Thank you! Your booking is completed","date":"Date","time":"Time","datetime":"Date Time","duration":"Duration","location":"Location","first_name":"First name","last_name":"Last name","phone":"Phone","email":"Email","address":"Address","address_2":"Address 2","status":"Status","country":"Country","full_name":"Fullname","product":"Service","product_placeholder":"Select your service","variant":"Variant","variant_placeholder":"Select your variant","location_placeholder":"Select a location","employee":"Employee","employee_placeholder":"Select an employee","quantity":"Quantity","back":"Back","payment":"Payment","you_can_only_bring":"You can only bring {number} people","not_available":"Selected service is currently not available.","no_employee":"No employee","no_location":"No location","is_required":"This field is required.","valid_phone_number":"Please enter a valid phone number.","valid_email":"Please enter a valid email.","time_slot_no_available":"This slot is no longer available","price":"Price","export_file_isc":"Export to file isc","confirm_free_booking_successfully":"Thank for your booking. We will get back to you shortly.","confirm_free_booking_unsuccessfully":"Whoops, looks like something went wrong.","duration_unit":"minutes"}},"price":"Price","not_available":"Selected training is currently not available."},"free_form":{"first_name":{"enable":true,"label":"First name","required":true},"last_name":{"enable":true,"label":"Last name","required":true},"phone_number":{"enable":false,"label":"Phone number","required":true},"email":{"label":"Email","required":true,"enable":true}},"languageDatepicker":{"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"daysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"daysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}}
+    var tpbSettings = {"general":{"hide_add_to_cart":"2","hide_buy_now":"2","redirect_url":null,"allow_bring_more":false,"confirm_to":"checkout","time_format":"24h","multipleEmployees":"1","multipleLocations":"1","formatDate":"YYYY-MM-DD","formatDateServe":"Y-m-d","formatDateTime":"YYYY-MM-DD HH:mm","formatTime":"HH:mm","weekStart":0},"booking":{"text_price_color":"#ff0000","timeBlock":"fixed","stepping":"60","font":"Arial","primary_color":"#1fd3c0","cancel_button":"#ffffff","text_color":"#6370a7","calender_background_color":"#2b3360","calender_text_color":"#ffffff","day_off_color":"#a3a3a3","time_slot_color":"#414c89","time_slot_color_hover":"#313d88","selected_time_slot_color":"#ffd153","background_color_calendar":"#2b3360","background_image":"preset1.jpg","selected_day_color":"#1fd3c0","time_slot_color_selected":"#ff007b","background_color_box_message_time_slot_no_available":"#e9e9e9","text_color_text_box_message_time_slot_no_available":"#424242","time_slot_no_available_color":"#a3a3a3","sortProduct":{"type":1,"sortProductAuto":"asc","sortProductManually":["6077269409975"]},"statusDefault":"2"},"translation":{"languageDatepicker":"en-US","customDatePickerDays":"Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday","customDatePickerDaysShort":"Sun, Mon, Tue, Wed, Thu, Fri, Sat","customDatePickerDaysMin":"Su, Mo, Tu, We, Th, Fr, Sa","customDatePickerMonths":"January, February, March, April, May, June, July, August, September, October, November, December","customDatePickerMonthsShort":"Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec","widget":{"default":{"please_select":"Please select service","training":"Training","trainer":"Trainer","bringing_anyone":"Bringing anyone with you?","num_of_additional":"Number of Additional People","date_and_time":"Pick date & time","continue":"Continue","total_price":"Total Price","confirm":"Confirm","cancel":"Cancel","thank_you":"Thank you! Your booking is completed","date":"Date","time":"Time","datetime":"Date Time","duration":"Duration","location":"Location","first_name":"First name","last_name":"Last name","phone":"Phone","email":"Email","address":"Address","address_2":"Address 2","status":"Status","country":"Country","full_name":"Fullname","product":"Service","product_placeholder":"Select your service","variant":"Variant","variant_placeholder":"Select your variant","location_placeholder":"Select a location","employee":"Employee","employee_placeholder":"Select an employee","quantity":"Quantity","back":"Back","payment":"Payment","you_can_only_bring":"You can only bring {number} people","not_available":"Selected service is currently not available.","no_employee":"No employee","no_location":"No location","is_required":"This field is required.","valid_phone_number":"Please enter a valid phone number.","valid_email":"Please enter a valid email.","time_slot_no_available":"This slot is no longer available","price":"Price","export_file_isc":"Export to file isc","confirm_free_booking_successfully":"Thank for your booking. We will get back to you shortly.","confirm_free_booking_unsuccessfully":"Whoops, looks like something went wrong.","duration_unit":"minutes"}}},"free_form":{"first_name":{"enable":true,"label":"First name","required":true},"last_name":{"enable":true,"label":"Last name","required":true},"phone_number":{"enable":false,"label":"Phone number","required":true},"email":{"label":"Email","required":true,"enable":true}},"languageDatepicker":{"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"daysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"daysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}}
   var checkPageProduct = false;
   {% if template contains "product" %}
   checkPageProduct = true;
@@ -42,9 +42,9 @@
   var tpbTimeZoneServer = 'UTC';
 
   var tpbConfigs = {
-    products : [{"id":"6011630387367","title":"Andrea","handle":"andrea","capacity":{"rule":{"37229437026471":1,"37229437059239":1,"37229437092007":1,"37229437124775":1},"type":"variant"},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37229437026471"},{"duration":60,"value":"37229437059239"},{"duration":60,"value":"37229437092007"},{"duration":60,"value":"37229437124775"}]},"location_ids":[16846,16848],"employee_ids":[22711]},{"id":"6011644805287","title":"Giovanni","handle":"giovanni","capacity":{"rule":{"37229557776551":1,"37229557809319":1,"37229557842087":1,"37229557874855":1,"37229557907623":1},"type":"variant"},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37229557776551"},{"duration":60,"value":"37229557809319"},{"duration":60,"value":"37229557842087"},{"duration":60,"value":"37229557874855"},{"duration":60,"value":"37229557907623"}]},"location_ids":[16846,16848],"employee_ids":[22711]},{"id":"6011638677671","title":"Luca","handle":"luca","capacity":{"type":"variant","rule":{"37229492600999":1,"37229492633767":1,"37229492666535":1,"37229492699303":1,"37229492732071":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37229492600999"},{"duration":60,"value":"37229492633767"},{"duration":60,"value":"37229492666535"},{"duration":60,"value":"37229492699303"},{"duration":60,"value":"37229492732071"}]},"location_ids":[16846,16848],"employee_ids":[22711]},{"id":"6011650113703","title":"Luisa","handle":"luisa","capacity":{"rule":{"37229579600039":1,"37229579632807":1,"37229579665575":1,"37229579698343":1,"37229579731111":1,"37229579763879":1},"type":"variant"},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37229579600039"},{"duration":60,"value":"37229579632807"},{"duration":120,"value":"37229579665575"},{"duration":60,"value":"37229579698343"},{"duration":60,"value":"37229579731111"},{"duration":60,"value":"37229579763879"}]},"location_ids":[16846,16848],"employee_ids":[22711]},{"id":"6011653456039","title":"Maria","handle":"maria","capacity":{"type":"variant","rule":{"37229597622439":1,"37229597687975":1,"37229597753511":1}},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"variant","rule":[{"duration":60,"value":"37229597622439"},{"duration":60,"value":"37229597687975"},{"duration":60,"value":"37229597753511"}]},"location_ids":[16846,16848],"employee_ids":[22711]}],
-    locations : [{"id":16846,"name":"Civitanova Marche","employee_ids":[22711]},{"id":16848,"name":"Porto Sant'Elpidio","employee_ids":[22711]}],
-    employees : [{"id":22711,"first_name":"Any","last_name":"Trainer"}]
+    products : [{"id":"6077269409975","title":"Andrea","handle":"andrea","capacity":{"type":"product","rule":1},"extra_filed_set_id":null,"note":null,"is_free":0,"available_time_basis":"product","duration":{"type":"product","rule":60},"location_ids":[17218],"employee_ids":[]}],
+    locations : [{"id":17218,"name":"Default location","employee_ids":[]}],
+    employees : []
   };
   var tpbText = tpbSettings.translation.widget.default;
   if (tpbSettings.translation.widget[tpbLocale]) {
@@ -144,11 +144,12 @@
             </button>
         </div>
     </div>
-
+    {% if settings.general.hideWaterMark == '0' %}
     <div class="copyright">
         <a href="//apps.shopify.com/partners/tipo" rel="nofollow" attribute target="_blank">Made by <span
             class="company">Tipo Appointment Booking</span></a>
     </div>
+    {% endif %}
 </script>
 <script type="template/html" id="tpb-modal-control">
     <div id="tpb-modal" class="tpb-modal">
@@ -311,7 +312,7 @@
                                     <label for="option-1" class="tpb-label-option1"></label>
                                     <select class="slim-select tpb-select-option tpb-select-option-1"
                                             placeholder="{{tpbText.variant_placeholder}}" name="option1"
-                                            data-label="option1" multiple>
+                                            data-label="option1">
                                         <option data-placeholder="true"/>
                                     </select>
                                 </div>
@@ -419,10 +420,12 @@
                 </div>
             </form>
         </div>
+        {% if settings.general.hideWaterMark == '0' %}
         <div class="copyright">
             <a href="//apps.shopify.com/partners/tipo" rel="nofollow" attribute target="_blank">Made by <span
                 class="company">Tipo Appointment Booking</span></a>
         </div>
+        {% endif %}
     </div>
 </script>
 <script type="template/html" id="tpb-confirm-form">
