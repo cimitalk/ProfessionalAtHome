@@ -870,25 +870,16 @@ var tpBooking = function ($) {
               if ((variant.option1 ? option1 == variant.option1 : true) && (variant.option2 ? option2 == variant.option2 : true) && (variant.option3 ? option3 == variant.option3 : true)) {
           
                tpbVariantId = variant.id
-                     //modules.variant = variant;
-                     //tpbPriceProduct = tpbPriceProduct+variant.price;
+                     modules.variant = variant;
+                     tpbPriceProduct = tpbPriceProduct+variant.price;
                      index = index_v;
                  }
  
-               if(option1){
-               option1.forEach(function(option,index_z){
-                 if(variant.title == option)
-                 {
-                   tpbPriceProduct=tpbPriceProduct+variant.price;
-                  
-                 }
-                });
-               }
                
              });
            
           //////PROBLEMA DA RISOLVERE
-      console.log(modules.variant);
+      //console.log(modules.variant);
       
      
      
