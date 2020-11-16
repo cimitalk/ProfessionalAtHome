@@ -168,7 +168,7 @@ var tpBooking = function ($) {
     tpb_engine.registerFilter('multipleWith', function (v, arg) {
         return v * arg;
     });
-//modifica a caso
+
     modules.getHistory = function (page) {
         $.ajax({
             url: tpbAppUrl + '/booking_api/get-history?urlShop=' + tpbUrlShop + '&customerId=' + tpbCustomer.id + '&page=' + page,
@@ -631,9 +631,10 @@ var tpBooking = function ($) {
                 $(self).find('.tpb-form-control.variant').show();
             }
             tpbAvailable = responseProducts.variants[0].available;
-             //tpbPriceProduct = responseProducts.variants[0].price;
+            
+            //tpbPriceProduct = responseProducts.variants[0].price;
              //Imposto il prezzo iniziale a 0
-            tpbPriceProduct = 0;
+             tpbPriceProduct = 0;
             if (tpbPriceProduct !== null && tpbProduct_.is_free == 0) {
                 $(self).find('.tpb-form-control.price').show();
                 $(self).find('.tpb-text-price').html(Shopify.formatMoney(tpbPriceProduct, window.moneyFormat));
@@ -861,29 +862,14 @@ var tpBooking = function ($) {
             var option2 = $('.tpb-select-option-2').val();
             var option3 = $('.tpb-select-option-3').val();
             var index = 0;
-            tpbPriceProduct =0;
-     
-            //console.log(option1);
-            //console.log(modules.product.variants);
-             ////////// 		
-             modules.product.variants.forEach(function (variant, index_v) {
-              if ((variant.option1 ? option1 == variant.option1 : true) && (variant.option2 ? option2 == variant.option2 : true) && (variant.option3 ? option3 == variant.option3 : true)) {
-          
-               tpbVariantId = variant.id
-                     modules.variant = variant;
-                     tpbPriceProduct = tpbPriceProduct+variant.price;
-                     index = index_v;
-                 }
- 
-               
-             });
-           
-          //////PROBLEMA DA RISOLVERE
-      //console.log(modules.variant);
-      
-     
-     
-     
+            modules.product.variants.forEach(function (variant, index_v) {
+                if ((variant.option1 ? option1 == variant.option1 : true) && (variant.option2 ? option2 == variant.option2 : true) && (variant.option3 ? option3 == variant.option3 : true)) {
+                    tpbVariantId = variant.id
+                    modules.variant = variant;
+                    tpbPriceProduct = variant.price;
+                    index = index_v;
+                }
+            });
             if (tpbPriceProduct !== null && tpbProduct_.is_free == 0 ) {
                 $(self).closest('.inner-step').find('.tpb-form-control.price').show();
                 $(self).closest('.inner-step').find('.tpb-text-price').html(Shopify.formatMoney(tpbPriceProduct, window.moneyFormat));
