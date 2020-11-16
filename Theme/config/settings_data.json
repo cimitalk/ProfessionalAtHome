@@ -17,11 +17,12 @@
       "hero-1": {
         "type": "hero",
         "settings": {
-          "alignment": "center",
+          "image": "shopify:\/\/shop_images\/long-blond-hair.jpg",
+          "alignment": "top",
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
-          "title": "Benvenuti nel negozio",
+          "title": "I need to book",
           "text": "<p>Prenota subito il tuo appuntamento. I nostri professionisti sono al tuo servizio<\/p>",
           "button_label": ""
         }
@@ -160,13 +161,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "title": "Link rapidi",
-              "menu": "footer"
-            }
-          },
           "footer-1": {
             "type": "newsletter",
             "settings": {
@@ -175,11 +169,10 @@
           }
         },
         "block_order": [
-          "footer-0",
           "footer-1"
         ],
         "settings": {
-          "show_payment_icons": true,
+          "show_payment_icons": false,
           "color_footer_bg": "#f6f6f6",
           "color_footer_text": "#333232",
           "show_locale_selector": true,
@@ -207,8 +200,8 @@
           "8df670b6-10e0-4603-af48-d5353e9d7e04"
         ],
         "settings": {
-          "title": "",
-          "grid": 3
+          "title": "Our services",
+          "grid": 2
         }
       },
       "collection-template": {
@@ -273,61 +266,11 @@
           "cart_ajax_enable": true,
           "cart_notes_enable": false
         }
-      },
-      "1604595602620c6693": {
-        "type": "featured-blog",
-        "settings": {
-          "title": "Articoli del blog",
-          "blog": "notizie",
-          "post_limit": 3,
-          "blog_show_author": false,
-          "blog_show_date": true,
-          "show_view_all": false
-        }
-      },
-      "160459567394b83d3f": {
-        "type": "slideshow",
-        "blocks": {
-          "160459567394b83d3f-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/confident-young-woman.jpg",
-              "alignment": "center center",
-              "slide_title": "Slide immagine",
-              "subheading": "Racconta la storia del tuo brand con video e immagini",
-              "button_label": ""
-            }
-          },
-          "160459567394b83d3f-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/friends-laughing-on-beach.jpg",
-              "alignment": "center center",
-              "slide_title": "Slide immagine",
-              "subheading": "Racconta la storia del tuo brand con video e immagini",
-              "button_label": ""
-            }
-          }
-        },
-        "block_order": [
-          "160459567394b83d3f-0",
-          "160459567394b83d3f-1"
-        ],
-        "settings": {
-          "slideshow_height": "adapt",
-          "text_size": "medium",
-          "text_alignment": "center center",
-          "show_overlay": true,
-          "autorotate": false,
-          "autorotate_speed": 3
-        }
       }
     },
     "content_for_index": [
       "hero-1",
-      "16045933542eb3ea2a",
-      "1604595602620c6693",
-      "160459567394b83d3f"
+      "16045933542eb3ea2a"
     ]
   },
   "presets": {
