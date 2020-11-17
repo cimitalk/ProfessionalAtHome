@@ -291,8 +291,26 @@
                     <div class="step1">
                         <div class="inner-step">
                             <h5>{{tpbText.please_select}}</h5>
-                            
-                            
+                            <div class="tpb-form-control product visible">
+                                <label for="product">{{tpbText.product}}</label>
+                                {% if isProductPage %}
+                                <input type="hidden" id="tpb-productId-input" data-handle="{{currentProducts.handle}}"
+                                       name="productId" data-label="{{tpbText.product}}"
+                                       value="{{currentProducts.id}}"/>
+                                <input type="text" id="tpb-productTitle-input" name="productTitle"
+                                       value="{{currentProducts.title}}" readonly/>
+                                {% else %}
+                                <select class="slim-select tpb-select-product"
+                                        placeholder="{{tpbText.product_placeholder}}" name="productId"
+                                        data-label="{{tpbText.product}}">
+                                    <option data-placeholder="true"></option>
+                                    {% for product in products %}
+                                    <option value="{{product.id}}" data-handle="{{product.handle}}">{{product.title}}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                                {% endif %}
+                            </div>
                             <div class="tpb-form-control variant">
                                 <div class="tpb-form-control-option tpb-option-1">
                                     <label for="option-1" class="tpb-label-option1"></label>
