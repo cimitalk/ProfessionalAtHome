@@ -19,7 +19,7 @@
         "type": "hero",
         "settings": {
           "image": "shopify:\/\/shop_images\/long-blond-hair.jpg",
-          "alignment": "top",
+          "alignment": "center",
           "hero_layout": "full_width",
           "hero_size": "large",
           "text_size": "large",
@@ -186,13 +186,13 @@
           "16045933542eb3ea2a-2": {
             "type": "featured_collection",
             "settings": {
-              "collection": "parrucchieri"
+              "collection": "hair-styling"
             }
           },
           "8df670b6-10e0-4603-af48-d5353e9d7e04": {
             "type": "featured_collection",
             "settings": {
-              "collection": "estetiste"
+              "collection": "beauty"
             }
           }
         },
