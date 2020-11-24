@@ -631,7 +631,6 @@ var tpBooking = function ($) {
                 $(self).find('.tpb-form-control.variant').show();
             }
             tpbAvailable = responseProducts.variants[0].available;
-            
             tpbPriceProduct = responseProducts.variants[0].price;
             if (tpbPriceProduct !== null && tpbProduct_.is_free == 0) {
                 $(self).find('.tpb-form-control.price').show();
@@ -1735,7 +1734,7 @@ var tpBooking = function ($) {
     return modules;
 }(window.jQuery, window, document);
 
-$(document).ready(function () {
+var TPBinit = function () {
     window.moneyFormat = $('.tipo-money-format').val();
     // Check install
     var installed = false;
@@ -1854,4 +1853,6 @@ $(document).ready(function () {
             $(this).addClass(cl);
         }
     });
-});
+}
+
+$(document).ready(TPBinit);
