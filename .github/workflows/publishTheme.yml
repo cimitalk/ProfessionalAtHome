@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v1
       
       - name: Shopify
-        uses: pgrimaud/action-shopify@2.1.2
+        uses: pgrimaud/action-shopify@2.1.0
         env:
           SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
           SHOPIFY_STORE_URL: ${{ secrets.SHOPIFY_STORE_URL }}
