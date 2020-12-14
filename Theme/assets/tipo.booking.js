@@ -99,7 +99,7 @@ var Shopify = Shopify || {}; Shopify.money_format = "${{amount}}"; Shopify.forma
 
 
 // Get selected variant
-function getSelectedVariant(form) {
+function tpbGetSelectedVariant(form) {
     var variant_id = $(form).find('[name="id"]').val();
     if (variant_id) return variant_id;
     return false;
@@ -309,7 +309,7 @@ var tpBooking = function ($) {
 
     modules.appendBookingFormOnProductPage = function (form) {
         var bookingFormTemplate = $('#tpb-booking-form').length ? $('#tpb-booking-form').html() : "";
-        tpbVariantId = getSelectedVariant(form) ? getSelectedVariant(form) : getFirstAvailableVariant(tpbProduct);
+        tpbVariantId = tpbGetSelectedVariant(form) ? tpbGetSelectedVariant(form) : getFirstAvailableVariant(tpbProduct);
 
         var products = tpbConfigs.products.map(function (product) {
             product.title = product.title.replace(/"/g, "&quot;");
@@ -1428,13 +1428,24 @@ var tpBooking = function ($) {
                         success: function success(cart) {
                           	var totalQty = 0
                             var isInCart = []
+                            var isEmployeeInCart = false
                             if(cart.item_count){
-                              isInCart = cart.items.filter(x => {
-                                if(x.id == tpbVariantId && typeof x.properties !== 'undefined' && x.properties != null && typeof x.properties._tipo_booking_json !== 'undefined'){
-                                  	totalQty = totalQty + x.quantity
+                              isInCart = cart.items.some(x => {
+                                if(typeof x.properties !== 'undefined' && typeof x.properties._tipo_booking_json !== 'undefined' && x.properties != null && (x.id == tpbVariantId || x.properties.Employee == cartPostData.Employee ) ){
+                                  	
                                 	var propsJson = JSON.parse(x.properties._tipo_booking_json)
                                     var cartPostPropsJson = data
-
+                                    if(x.id != tpbVariantId){
+                                    	let dateTime = cartPostPropsJson.find(x => x.name == 'datetime').value
+                                        let dateTimeInCart = propsJson.find(x => x.name == 'datetime').value
+                                        
+                                        let employeeId = cartPostPropsJson.find(x => x.name == 'employeeId').value
+                                        let employeeIdInCart = propsJson.find(x => x.name == 'employeeId').value
+                                        
+                                        if(dateTime == dateTimeInCart && employeeId == employeeIdInCart){
+                                        	isEmployeeInCart = true
+                                        }
+                                    }
                                     // Remove form data
                                     propsJson = propsJson.filter(x => x.name.indexOf('form') === -1 )
                                     cartPostPropsJson = cartPostPropsJson.filter(x => x.name.indexOf('form') === -1 )
@@ -1442,12 +1453,15 @@ var tpBooking = function ($) {
                                       	totalQty = totalQty + x.quantity
                                     	return true
                                     }
-                                    return false
                                 }
+                                return false
                               })
                             }
-
-                            if(totalQty + qty <= tpbCapacity + 1 ){
+                          	let allowBringMore = true
+                            if(!tpbSettings.general.allow_bring_more && isInCart === true ){
+                            	allowBringMore = false
+                            }
+                            if( allowBringMore && totalQty + qty <= tpbCapacity + 1 && !isEmployeeInCart ){
                             	$.ajax({
                                     url: '/cart/add.js',
                                     type: 'POST',
@@ -1820,7 +1834,7 @@ var TPBinit = function () {
 
     var form = $('.tpb-product-page')
     if(form.length == 0){
-    	form = $('form[method="post"][action="/cart/add"]:visible:first');
+    	form = $('form[method="post"][action*="/cart/add"]:visible:first');
     }
 
     if (form.length && checkPageProduct) {

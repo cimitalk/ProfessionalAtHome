@@ -66,23 +66,22 @@
                       {%- endif -%}
 
                       {%- for p in properties -%}
-                      {% assign property_first_char = p.first | slice: 0 %}
-                        {%- if p.last != blank and property_first_char != '_' -%}
-                          <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
-                            <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+                        {% assign property_first_char = p.first | slice: 0 %}
+                        <li class="product-details__item product-details__item--property
+                          {%if property_size == 0 or p.last == blank or property_first_char == '_' %} hide{% endif %}" data-cart-item-property>
+                          <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
 
-                            {%- comment -%}
-                              Check if there was an uploaded file associated
-                            {%- endcomment -%}
-                            <span data-cart-item-property-value>
-                              {%- if p.last contains '/uploads/' -%}
-                                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                              {%- else -%}
-                                {{ p.last }}
-                              {%- endif -%}
-                            </span>
-                          </li>
-                        {%- endif -%}
+                          {%- comment -%}
+                            Check if there was an uploaded file associated
+                          {%- endcomment -%}
+                          <span data-cart-item-property-value>
+                            {%- if p.last contains '/uploads/' -%}
+                              <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                            {%- else -%}
+                              {{ p.last }}
+                            {%- endif -%}
+                          </span>
+                        </li>
                       {%- endfor -%}
                     </ul>
 
