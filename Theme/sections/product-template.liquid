@@ -140,6 +140,8 @@
         <div class="product-single__description rte">
           {{ product.description }}
         </div>
+        
+        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
 
           <div class="product__price" style="display:none">
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
