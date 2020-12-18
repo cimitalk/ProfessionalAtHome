@@ -9,6 +9,11 @@
       {% if section.settings.text != blank %}
         <div class="rich-text__text--{{ section.settings.text_size }} rte-setting text-center">{{ section.settings.text }}</div>
       {% endif %}
+      {% if section.settings.section_link != blank %}
+      
+        <div class="btn" style="display: block; margin-left: 35%; margin-right: 35%; background-color:powderblue">{{ section.settings.section_link }}</div>
+
+      {% endif %}
     </div>
   </div>
 </div>
@@ -169,6 +174,35 @@
         "zh-TW": "<p>您可以用這段文字和顧客分享品牌資訊、描述產品、分享公告，或歡迎顧客光臨您的商店。</p>"
       }
     },
+
+	{
+		"type": "richtext",
+      "id": "section_link",
+      "label": {
+        "cs": "Link",
+        "da": "Link",
+        "de": "Link",
+        "en": "Link",
+        "es": "Link",
+        "fi": "Link",
+        "fr": "Link",
+        "it": "Link",
+        "ja": "見出し",
+        "ko": "제목",
+        "nb": "Link",
+        "nl": "Link",
+        "pl": "Link",
+        "pt-BR": "Link",
+        "pt-PT": "Link",
+        "sv": "Link",
+        "th": "ส่วนหัว",
+        "tr": "Link",
+        "vi": "Link",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+	},
+
     {
       "type": "select",
       "id": "text_size",

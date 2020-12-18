@@ -267,11 +267,22 @@
           "cart_ajax_enable": true,
           "cart_notes_enable": false
         }
+      },
+      "1608313273c39305fc": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "Vuoi essere presente sul nostro portale?",
+          "text": "",
+          "section_link": "<p><a title=\"Professional Registration Page\" href=\"\/pages\/professional-registration-page\">Iscriviti<\/a><\/p>",
+          "text_size": "medium"
+        }
       }
     },
     "content_for_index": [
       "hero-1",
-      "16045933542eb3ea2a"
+      "16045933542eb3ea2a",
+      "1608313273c39305fc"
     ]
   },
   "presets": {
